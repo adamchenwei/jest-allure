@@ -11,6 +11,12 @@ class JestAllureReporter implements jest.Reporter {
 
     constructor(globalConfig: jest.GlobalConfig, options: Partial<JestAllureReporter.ReporterConfig> = {}) {
         this.reporterOptions = { resultsDir: path.resolve(".", options.resultsDir || "allure-results") };
+        console.log('-----inside jest-alure woooooohoooo vvv');
+        console.log('this.reporterOptions');
+        console.log(JSON.stringify(this.reporterOptions));
+        console.log('options');
+        console.log(options);
+        console.log('-----inside jest-alure woooooohoooo ^^^');
     }
 
     onTestStart(test: jest.Test) {
